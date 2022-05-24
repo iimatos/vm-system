@@ -1,0 +1,1 @@
+!function(){"use strict";window.addEventListener("load",(function(){var r=document.querySelectorAll("img[data-src]"),t=new IntersectionObserver((function(r){r.forEach((function(r){if(r.isIntersecting){var e=r.target;e.src=e.dataset.src,t.unobserve(e)}}))}),{root:null,rootMargin:"0px",threshold:.2});r.forEach((function(r){return[t.observe(r)]}))}))}();
