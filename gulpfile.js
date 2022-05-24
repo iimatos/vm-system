@@ -6,6 +6,7 @@ const webpack = require("webpack-stream");
 const order = require("gulp-order");
 const concat = require("gulp-concat");
 const clean = require("gulp-clean-css");
+const critical = require("critical");
 
 // Criação do server para dev
 
@@ -69,6 +70,8 @@ function bundleJS() {
     .pipe(browserSync.stream());
 }
 
+// gerar pastas organizadas para hospedagem
+
 async function buildPage() {
   const html = gulp.src("*.html").pipe(gulp.dest("./dist"));
   const styles = gulp.src("./css/style.min.css").pipe(gulp.dest("./dist/css/"));
@@ -86,7 +89,25 @@ function watchers() {
   gulp.watch("./css/modules/*.css", buildCSS);
 }
 
+// Gerar CSS crítico || Passar opções do seu modo
+
+async function criticalCSS() {
+  critical.generate({
+    inline: true,
+    base: "./",
+    src: `index.html`,
+    css: ["css/style.css"],
+    width: 1920,
+    height: 1080,
+    target: {
+      css: "critical.css",
+      html: `index-critical.html`,
+    },
+  });
+}
+
 // tasks
+exports.critical = criticalCSS;
 exports.buildJS = bundleJS;
 exports.buildSCSS = buildSCSS;
 exports.buildCSS = buildCSS;
