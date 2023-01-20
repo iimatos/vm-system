@@ -1,0 +1,28 @@
+.button-primary,
+.button-primary-sm,
+.button-primary-lg {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  align-items: center;
+
+  color: $blue-50;
+  background-color: $blue-700;
+  padding: 0.8rem 1.6rem;
+  font-weight: 400;
+  &:hover {
+    background-color: $blue-500;
+  }
+  border-radius: 0.4rem;
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.button-primary-sm {
+  padding: 0.4rem 1.6rem;
+}
+
+.button-primary-lg {
+  padding: 1.2rem 1.6rem;
+}

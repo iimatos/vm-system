@@ -1,0 +1,30 @@
+input {
+  color: $blue-700;
+  padding: 0.4rem 1.6rem;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: $blue-50;
+  width: 100%;
+  &:focus {
+    border: 1px solid $blue-500;
+  }
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  &.input {
+    padding: 0.8rem 1.6rem;
+  }
+  &.input-lg {
+    padding: 1.2rem 1.6rem;
+  }
+  &:disabled {
+    color: $gray-200;
+    background: $gray-50;
+    border: 1px solid $gray-200;
+  }
+}

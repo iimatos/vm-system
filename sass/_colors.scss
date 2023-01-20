@@ -1,0 +1,129 @@
+$blue-50: #e8eef7;
+$blue-100: #b8cbe7;
+$blue-200: #96b2db;
+$blue-300: #668ecb;
+$blue-400: #4979c1;
+$blue-500: #1b57b1;
+$blue-600: #194fa1;
+$blue-700: #133e7e;
+$blue-800: #0f3061;
+$blue-900: #0b254a;
+
+$gray-50: #ebeced;
+$gray-100: #bfc3c8;
+$gray-200: #a1a6ae;
+$gray-300: #767d88;
+$gray-400: #5b6471;
+$gray-500: #323d4e;
+$gray-600: #2e3847;
+$gray-700: #242b37;
+$gray-800: #1c222b;
+$gray-900: #151a21;
+
+$green-50: #eaf9ee;
+$green-100: #bfedcc;
+$green-200: #9fe5b3;
+$green-300: #74d990;
+$green-400: #59d17a;
+$green-500: #2fc659;
+$green-600: #2bb451;
+$green-700: #218d3f;
+$green-800: #1a6d31;
+$green-900: #145325;
+
+$yellow-50: #fefbea;
+$yellow-100: #fbf1bd;
+$yellow-200: #f9ea9d;
+$yellow-300: #f6e171;
+$yellow-400: #f4db55;
+$yellow-500: #f1d22b;
+$yellow-600: #dbbf27;
+$yellow-700: #ab951f;
+$yellow-800: #857418;
+$yellow-900: #655812;
+
+$red-50: #feeaea;
+$red-100: #fbbdbd;
+$red-200: #f99d9d;
+$red-300: #f99d9d;
+$red-400: #f55555;
+$red-500: #f32b2b;
+$red-600: #dd2727;
+$red-700: #ad1f1f;
+$red-800: #861818;
+$red-900: #661212;
+
+$colors: (
+  'blue': (
+    'blue-50': #e8eef7,
+    'blue-100': #b8cbe7,
+    'blue-200': #96b2db,
+    'blue-300': #668ecb,
+    'blue-400': #4979c1,
+    'blue-500': #1b57b1,
+    'blue-600': #194fa1,
+    'blue-700': #133e7e,
+    'blue-800': #0f3061,
+    'blue-900': #0b254a,
+  ),
+  'gray': (
+    'gray-50': #ebeced,
+    'gray-100': #bfc3c8,
+    'gray-200': #a1a6ae,
+    'gray-300': #767d88,
+    'gray-400': #5b6471,
+    'gray-500': #323d4e,
+    'gray-600': #2e3847,
+    'gray-700': #242b37,
+    'gray-800': #1c222b,
+    'gray-900': #151a21,
+  ),
+  'green': (
+    'green-50': #eaf9ee,
+    'green-100': #bfedcc,
+    'green-200': #9fe5b3,
+    'green-300': #74d990,
+    'green-400': #59d17a,
+    'green-500': #2fc659,
+    'green-600': #2bb451,
+    'green-700': #218d3f,
+    'green-800': #1a6d31,
+    'green-900': #145325,
+  ),
+  'yellow': (
+    'yellow-50': #fefbea,
+    'yellow-100': #fbf1bd,
+    'yellow-200': #f9ea9d,
+    'yellow-300': #f6e171,
+    'yellow-400': #f4db55,
+    'yellow-500': #f1d22b,
+    'yellow-600': #dbbf27,
+    'yellow-700': #ab951f,
+    'yellow-800': #857418,
+    'yellow-900': #655812,
+  ),
+  'red': (
+    'red-50': #feeaea,
+    'red-100': #fbbdbd,
+    'red-200': #f99d9d,
+    'red-300': #f99d9d,
+    'red-400': #f55555,
+    'red-500': #f32b2b,
+    'red-600': #dd2727,
+    'red-700': #ad1f1f,
+    'red-800': #861818,
+    'red-900': #661212,
+  ),
+);
+
+@each $colorGroup, $colorList in $colors {
+  @each $colorKey, $colorValue in $colorList {
+    .bg-#{$colorKey} {
+      background-color: $colorValue;
+    }
+
+    .text-#{$colorKey} {
+      color: $colorValue;
+    }
+  }
+}

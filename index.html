@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <meta property="og:url" content="http://www.example.com" />
     <meta property="og:title" content="Website page title" />
     <meta property="og:description" content="" />
@@ -23,5 +29,318 @@
     />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <section class="flex-column">
+      <div class="componentes container">
+        <h2 class="heading-1 mb-24">COMPONENTES</h2>
+
+        <section class="componentes__block row">
+          <div class="col-4 col-4-md col-4-sm">
+            <p class="text-16 my-12">Small</p>
+            <a href="#" class="button-primary-sm">Button </a>
+            <p class="text-16 my-12">Padrão</p>
+            <a href="#" class="button-primary">Button</a>
+            <p class="text-16 my-12">Large</p>
+            <a href="#" class="button-primary-lg">Button</a>
+          </div>
+        </section>
+
+        <section class="componentes__block row">
+          <div class="col-8">
+            <p class="text-16 my-12">Small</p>
+            <div class="input-container">
+              <input
+                class="input-sm"
+                type="text"
+                name="name"
+                id="id"
+                placeholder="Placeholder"
+              />
+            </div>
+            <p class="text-16 my-12">Padrão</p>
+            <input
+              class="input"
+              type="text"
+              name="name"
+              id="id"
+              placeholder="Placeholder"
+            />
+
+            <p class="text-16 my-12">Large</p>
+            <input
+              class="input-lg"
+              type="text"
+              name="name"
+              id="id"
+              placeholder="Placeholder"
+            />
+
+            <p class="text-16 my-12">Disabled</p>
+            <input
+              class="input-lg"
+              type="text"
+              name="name"
+              id="id"
+              placeholder="Placeholder"
+              disabled
+            />
+
+            <p class="text-16 my-12">Card</p>
+            <article class="card">
+              <div
+                class="card__title flex justify-between items-center py-20 px-32 pb-16"
+              >
+                <h3 class="text-23">Preview</h3>
+                <svg><use xlink:href="sprite.svg#heart"></use></svg>
+              </div>
+              <div class="card__image">
+                <img
+                  src="https://images.unsplash.com/photo-1673972249399-5fbcf14f240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  alt=""
+                />
+              </div>
+              <div class="card__content">
+                <p class="text-16 text-blue-700">
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit..."
+                </p>
+              </div>
+              <a href="#" class="card__button button-primary">View details</a>
+            </article>
+
+            <p class="text-16 my-12">Card sem imagem</p>
+            <article class="card">
+              <div
+                class="card__title flex justify-between items-center py-20 px-32 pb-16"
+              >
+                <h3 class="text-23">Preview</h3>
+                <svg><use xlink:href="sprite.svg#heart"></use></svg>
+              </div>
+
+              <div class="card__content">
+                <p class="text-16 text-blue-700">
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit..."
+                </p>
+              </div>
+              <a href="#" class="card__button button-primary">View details</a>
+            </article>
+
+            <p class="text-16 my-12">Card sem botão</p>
+            <article class="card">
+              <div
+                class="card__title flex justify-between items-center py-20 px-32 pb-16"
+              >
+                <h3 class="text-23">Preview</h3>
+                <svg><use xlink:href="sprite.svg#heart"></use></svg>
+              </div>
+
+              <div class="card__content">
+                <p class="text-16 text-blue-700">
+                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit..."
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="text-23 my-24">Cards no grid</h2>
+
+          <div class="grid">
+            <div class="row gap-1">
+              <div class="col-4 col-4-md col-4-sm">
+                <article class="card">
+                  <div
+                    class="card__title flex justify-between items-center py-20 px-32 pb-16"
+                  >
+                    <h3 class="text-23">Preview</h3>
+                    <svg><use xlink:href="sprite.svg#heart"></use></svg>
+                  </div>
+                  <div class="card__image">
+                    <img
+                      src="https://images.unsplash.com/photo-1673972249399-5fbcf14f240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card__content">
+                    <p class="text-16 text-blue-700">
+                      "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                      amet, consectetur, adipisci velit..."
+                    </p>
+                  </div>
+                  <a href="#" class="card__button button-primary"
+                    >View details</a
+                  >
+                </article>
+              </div>
+
+              <div class="col-4 col-4-md col-4-sm">
+                <article class="card">
+                  <div
+                    class="card__title flex justify-between items-center py-20 px-32 pb-16"
+                  >
+                    <h3 class="text-23">Preview</h3>
+                    <svg><use xlink:href="sprite.svg#heart"></use></svg>
+                  </div>
+                  <div class="card__image">
+                    <img
+                      src="https://images.unsplash.com/photo-1673972249399-5fbcf14f240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card__content">
+                    <p class="text-16 text-blue-700">
+                      "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                      amet, consectetur, adipisci velit..."
+                    </p>
+                  </div>
+                  <a href="#" class="card__button button-primary"
+                    >View details</a
+                  >
+                </article>
+              </div>
+
+              <div class="col-4 col-4-md col-4-sm">
+                <article class="card">
+                  <div
+                    class="card__title flex justify-between items-center py-20 px-32 pb-16"
+                  >
+                    <h3 class="text-23">Preview</h3>
+                    <svg><use xlink:href="sprite.svg#heart"></use></svg>
+                  </div>
+                  <div class="card__image">
+                    <img
+                      src="https://images.unsplash.com/photo-1673972249399-5fbcf14f240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card__content">
+                    <p class="text-16 text-blue-700">
+                      "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                      amet, consectetur, adipisci velit..."
+                    </p>
+                  </div>
+                  <a href="#" class="card__button button-primary"
+                    >View details</a
+                  >
+                </article>
+              </div>
+
+              <div class="col-4 col-4-md col-4-sm">
+                <article class="card">
+                  <div
+                    class="card__title flex justify-between items-center py-20 px-32 pb-16"
+                  >
+                    <h3 class="text-23">Preview</h3>
+                    <svg><use xlink:href="sprite.svg#heart"></use></svg>
+                  </div>
+                  <div class="card__image">
+                    <img
+                      src="https://images.unsplash.com/photo-1673972249399-5fbcf14f240b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="card__content">
+                    <p class="text-16 text-blue-700">
+                      "Neque porro quisquam est qui dolorem ipsum quia dolor sit
+                      amet, consectetur, adipisci velit..."
+                    </p>
+                  </div>
+                  <a href="#" class="card__button button-primary"
+                    >View details</a
+                  >
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="my-64">
+          <h3 class="text-23 my-24">Card info</h3>
+          <div class="col-6">
+            <article class="card__info">
+              <div class="card__title flex justify-between items-center">
+                <h3 class="text-23">Info name</h3>
+                <svg><use xlink:href="sprite.svg#plus-circle"></use></svg>
+              </div>
+
+              <div class="card__content">
+                <ul class="card__content__infos">
+                  <li class="content__info">
+                    <div class="content__info--top">
+                      <p class="text-16 text-blue-700">Content title</p>
+                      <svg>
+                        <use xlink:href="sprite.svg#dots-vertical"></use>
+                      </svg>
+                    </div>
+                    <div class="content__info--bottom">
+                      <p class="text-16">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="content__info">
+                    <div class="content__info--top">
+                      <p class="text-16 text-blue-700">Content title</p>
+                      <svg>
+                        <use xlink:href="sprite.svg#dots-vertical"></use>
+                      </svg>
+                    </div>
+                    <div class="content__info--bottom">
+                      <p class="text-16">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="content__info">
+                    <div class="content__info--top">
+                      <p class="text-16 text-blue-700">Content title</p>
+                      <svg>
+                        <use xlink:href="sprite.svg#dots-vertical"></use>
+                      </svg>
+                    </div>
+                    <div class="content__info--bottom">
+                      <p class="text-16">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="my-64">
+          <h3 class="text-23 my-24">Card DOCS</h3>
+          <div class="col-6">
+            <article class="card__docs">
+              <div class="card__title flex justify-between items-center">
+                <h3 class="text-23">Files</h3>
+                <svg><use xlink:href="sprite.svg#plus-circle"></use></svg>
+              </div>
+
+              <div class="card__content">
+                <ul class="card__files">
+                  <li class="card__file"></li>
+                </ul>
+              </div>
+
+              <a href="#" class="card__button button-primary">View details</a>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
 </html>

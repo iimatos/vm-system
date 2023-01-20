@@ -1,0 +1,64 @@
+$types: (
+  'headings': (
+    40,
+    33,
+    28,
+    23,
+    19,
+    16,
+  ),
+  'body': (
+    23,
+    19,
+    16,
+    13,
+  ),
+);
+
+@each $key, $sizes in $types {
+  @if $key == 'headings' {
+    @for $i from 1 through length($sizes) {
+      .heading-#{$i} {
+        font-family: 'Oswald', sans-serif;
+        font-size: #{nth($sizes, $i)}px;
+        @if nth($sizes, $i) > 24 {
+          line-height: 120%;
+        } @else {
+          line-height: 140%;
+        }
+      }
+    }
+  } @else if $key == 'body' {
+    @for $i from 1 through length($sizes) {
+      .text-#{nth($sizes, $i)} {
+        font-family: 'Roboto', sans-serif;
+        font-size: #{nth($sizes, $i)}px;
+        line-height: 140%;
+      }
+    }
+  }
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}

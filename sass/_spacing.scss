@@ -1,0 +1,76 @@
+@use 'sass:math';
+$spacing: (
+  'values': (
+    0,
+    1,
+    2,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    128,
+  ),
+);
+
+@each $key, $list in $spacing {
+  @for $i from 1 through length($list) {
+    .mt-#{nth($list,$i)} {
+      margin-top: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .mb-#{nth($list,$i)} {
+      margin-bottom: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .mr-#{nth($list,$i)} {
+      margin-right: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .ml-#{nth($list,$i)} {
+      margin-left: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .mx-#{nth($list,$i)} {
+      margin-left: #{math.div(nth($list, $i), 10)}rem;
+      margin-right: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .my-#{nth($list,$i)} {
+      margin-top: #{math.div(nth($list, $i), 10)}rem;
+      margin-bottom: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .pt-#{nth($list,$i)} {
+      padding-top: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .pb-#{nth($list,$i)} {
+      padding-bottom: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .pr-#{nth($list,$i)} {
+      padding-right: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .pl-#{nth($list,$i)} {
+      padding-left: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .px-#{nth($list,$i)} {
+      padding-left: #{math.div(nth($list, $i), 10)}rem;
+      padding-right: #{math.div(nth($list, $i), 10)}rem;
+    }
+
+    .py-#{nth($list,$i)} {
+      padding-top: #{math.div(nth($list, $i), 10)}rem;
+      padding-bottom: #{math.div(nth($list, $i), 10)}rem;
+    }
+  }
+}
