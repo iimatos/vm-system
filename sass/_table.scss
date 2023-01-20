@@ -1,0 +1,23 @@
+body {
+  background: #ebebeb;
+  padding: 4.8rem 2rem;
+}
+
+.board {
+  border-collapse: collapse;
+
+  .board__header {
+    background: transparent;
+    padding: 4rem;
+    th {
+      text-align: center;
+    }
+  }
+
+  .board__info {
+    background: $blue-50;
+    td {
+      text-align: center;
+    }
+  }
+}

@@ -127,28 +127,42 @@
   }
 
   .card__content {
-    .content__info {
+    .card__files {
       padding: 0.8rem 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-      .content__info--top {
+      .card__file {
         display: flex;
         justify-content: space-between;
-        padding: 0 1.6rem;
+        align-items: center;
+        color: $gray-700;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-        p {
-          font-weight: 500;
+        .card__file--left {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.8rem;
+
+          .card__file__icon {
+            color: $red-500;
+          }
+          .card__file__name {
+            line-height: 0;
+          }
         }
 
-        svg {
-          color: $gray-400;
-        }
-      }
+        .card__file--right {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.8rem;
 
-      .content__info--bottom {
-        color: $gray-400;
-        margin-top: 0.8rem;
-        padding: 0 1.6rem;
+          .card__file__download {
+            width: 24px;
+            height: 24px;
+            color: $blue-700;
+          }
+        }
       }
     }
   }

@@ -11,6 +11,7 @@ html {
 body {
   font-size: 16px;
   font-family: 'Robot', sans-serif;
+  color: $gray-700;
 }
 
 h1,
@@ -19,7 +20,12 @@ h3,
 h4,
 h5,
 h6 {
+  color: inherit;
   font-family: 'Oswald', sans-serif;
+}
+
+p {
+  color: inherit;
 }
 
 a {
@@ -46,9 +52,13 @@ button {
   appearance: none;
   background: none;
   outline: none;
+  cursor: pointer;
 }
 
 svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
 }
